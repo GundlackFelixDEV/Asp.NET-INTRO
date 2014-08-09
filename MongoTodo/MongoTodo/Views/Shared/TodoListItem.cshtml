@@ -1,0 +1,8 @@
+﻿@model MongoTodo.Models.Todo
+
+<div>
+    <h6>@Html.DisplayFor(model => model.Titel)</h6>
+    <div style="float:right">
+        @Html.ActionLink("Edit", "EditTodo", new { id = Model.Id })
+    </div>
+</div>

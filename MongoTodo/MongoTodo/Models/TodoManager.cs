@@ -24,11 +24,13 @@ namespace MongoTodo.Models
             }
         }
 
-        public void newItem(Todo aItem)
+        public void newItem(string aTitel)
         {
             var newId = (todoItems.Count == 0)?1:todoItems.Max(t => t.Id);
-            aItem.Id = newId;
-            todoItems.Add(aItem);
+            Todo newItem = new Todo();
+            newItem.Titel = aTitel;
+            newItem.Id = newId;
+            todoItems.Add(newItem);
         }
 
         public Todo findItem(int id)
