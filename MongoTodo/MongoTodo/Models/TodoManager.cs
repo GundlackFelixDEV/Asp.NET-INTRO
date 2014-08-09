@@ -16,7 +16,7 @@ namespace MongoTodo.Models
 
         }
 
-        public List<Todo> allItems
+        public List<Todo> AllItems
         {
             get
             {
@@ -49,7 +49,7 @@ namespace MongoTodo.Models
             }
             else
             {
-                throw(new InvalidOperationException(string.Format("Item {0} not found!",aItem.Id));
+                throw(new InvalidOperationException(string.Format("Item {0} not found!",aItem.Id)));
             }
         }
 
