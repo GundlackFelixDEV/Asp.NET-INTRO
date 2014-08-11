@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MongoTodo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MongoTodo")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der "typelib", wenn dieses Projekt für COM verfügbar gemacht wird.
-[assembly: Guid("3b7949da-d192-46c8-8c85-9541820b4b4d")]
+[assembly: Guid("f9bb6b0f-38f3-453f-a268-cabd79f8238a")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

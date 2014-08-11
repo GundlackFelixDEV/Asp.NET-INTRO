@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Meine ASP.NET-Anwendung</title>
     @Styles.Render("~/Content/Mobile/css")
-    @Scripts.Render("~/bundles/jquerymobile")
+    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
     <div data-type="header" data-position="fixed">
-        <h1>I'm the header</h1>
         <div data-role="navbar">
-            <ul>
-                <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
-                <li>@Html.ActionLink("Info", "About", "Home")</li>
-                <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
-            </ul>
+            <span>
+                @Html.Partial("_ViewSwitcher")
+            </span>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-    </div>
-    <div data-role="footer" data-position="fixed">
+
+    <div data-role="page" class="container body-content">
+        <div data-role="content">
+            @RenderSection("featured", false)
+            @RenderBody()
+        </div>
+
+        <div data-role="footer" data-position="fixed">
             <p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
+        </div>
     </div>
+   
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
