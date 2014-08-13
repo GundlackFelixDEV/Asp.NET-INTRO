@@ -9,9 +9,9 @@ namespace MongoTodo
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jqueryval")
-                .Include("~/Scripts/jquery.validate.js")
-                .Include("~/Scripts/jquery.validate.unobtrusive.js"));
-
+                .Include("~/Scripts/jquery.validate.js","~/Scripts/jquery.validate.unobtrusive.js")
+                .Include("~/Scripts/jquery.validate.AddTodo.js"));
+            
             bundles.Add(new ScriptBundle("~/bundles/jquery")
                .Include("~/Scripts/jquery-{version}.js"));
 

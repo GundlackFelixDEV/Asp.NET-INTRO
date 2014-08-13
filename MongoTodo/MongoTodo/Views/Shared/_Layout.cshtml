@@ -5,31 +5,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Meine ASP.NET-Anwendung</title>
-    @Styles.Render("~/Content/Mobile/css", "~/Content/jquerymobile/css")
-    @Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
 </head>
 <body>
-    <div data-type="header" data-position="fixed">
-        <div data-role="navbar">
-            <span>
-                @Html.Partial("_ViewSwitcher")
-            </span>
-        </div>
-    </div>
-
     <div data-role="page" class="container body-content">
+        <div data-type="header" data-position="fixed">
+            <div data-role="navbar">
+                <h1>@ViewBag.Title</h1>
+                <ul>
+                    <li>@Html.Partial("_ViewSwitcher")</li>
+                </ul>                    
+            </div>
+        </div>
         <div data-role="content">
-            @RenderSection("featured", false)
             @RenderBody()
         </div>
-
         <div data-role="footer" data-position="fixed">
             <p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
         </div>
     </div>
-   
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
