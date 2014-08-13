@@ -367,6 +367,11 @@
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery.mobile-1.4.2.js" />
     <Content Include="Scripts\jquery.mobile-1.4.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.7.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -393,6 +398,9 @@
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Scripts\jquery.mobile-1.4.2.min.map" />
     <Content Include="Views\TodoManager\Main.Mobile.cshtml" />
+    <Content Include="Views\Shared\AddTodoMini.cshtml" />
+    <Content Include="Views\Shared\EditTodo.cshtml" />
+    <Content Include="Views\Shared\TodoListItem.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

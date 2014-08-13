@@ -24,7 +24,7 @@ namespace MongoTodo.Controllers
             }
             else
             {
-                return View("Main",new TodoManager().AllItems);
+                return RedirectToAction("Index");
             }
         }
         public ActionResult Add(String aTitel)
@@ -32,7 +32,7 @@ namespace MongoTodo.Controllers
             if(ViewData.ModelState.IsValid)
             {
                 new TodoManager().newItem(aTitel);
-                return View("Main", new TodoManager().AllItems);
+                return RedirectToAction("Index");
             }
 
             return View(aTitel);

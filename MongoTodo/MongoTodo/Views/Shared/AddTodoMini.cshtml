@@ -1,6 +1,6 @@
 ﻿@model MongoTodo.Models.Todo
 
-@using (Html.BeginForm("Add","TodoManager"))
+@using (Html.BeginForm("Add", "TodoManager", FormMethod.Post, new { id = "AddTodoForm" , @class = "cmxform"}))
 {
     @Html.AntiForgeryToken()
    
@@ -20,8 +20,27 @@
         </div>
     </div>
 }
+<script>
+    $(document).ready(function () {
+        console.log("Test");
+        var form = document.getElementById("AddTodoForm");
+        /*
+        $("#AddTodoForm").validate();
+        $("#AddTodoForm").submit(function (event) {
+            var isValid = $this.valid();
 
-@section Scripts
-{
-    @Scripts.Render("~/bundles/jqueryval")
-}
+            if (!isValid)
+                event.preventDefault();
+        });
+        $('#Titel').rules('add', {
+            required: true,
+            minlength: 5,
+            maxlength: 32,
+            messages: {
+                required: "Please enter a todo titel",
+                minlength: "Titel at least 5 characters",
+                maxlength: "Titel maximum length 32 characters"
+            }
+        });*/
+    });
+</script>
