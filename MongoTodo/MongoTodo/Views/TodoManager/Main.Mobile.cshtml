@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MongoTodo.Models.Todo>
+
+@{
+    ViewBag.Titel = "MongoTodo Awesome TODOs";
+    var lastDate = default(DateTime);
+}
+
+@{
+    Html.RenderPartial("AddTodoMini",model: new MongoTodo.Models.Todo());
+}
+
+<ul data-role="listview">
+@foreach (var item in Model)
+{
+    if (item.Create.Date != lastDate.Date)
+    {
+        lastDate = item.Create;
+        <li data-role="list-divider">@Html.DisplayFor(modelItem => item.Create)</li>
+    }
+    <li>
+        @Html.Partial("TodoListItem", item)
+    </li>
+}
+</ul>
