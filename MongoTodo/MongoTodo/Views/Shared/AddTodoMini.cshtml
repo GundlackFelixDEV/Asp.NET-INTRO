@@ -1,9 +1,11 @@
 ﻿@model MongoTodo.Models.Todo
-@{ Html.EnableClientValidation(); }
-@using (Html.BeginForm("Add", "TodoManager", FormMethod.Post, new { id = "AddTodoForm" , @class = "cmxform AddTodoForm"}))
+@{ 
+    Html.EnableClientValidation(); 
+}
+@using (Html.BeginForm("Add", "TodoManager", FormMethod.Post, new { data_ajax = "false" }))
 {
     @Html.AntiForgeryToken()
-   
+    @Html.ValidationSummary(true)
     <div class="form-horizontal">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -12,7 +14,7 @@
                 @Html.ValidationMessageFor(model => model.Titel)             
             </div>
             <div class="col-md-10">
-                <input type="submit" value="Start" class="btn btn-default"/>
+                <input type="submit" value="Start" class="btn btn-default">
             </div>
         </div>
     </div>

@@ -18,24 +18,15 @@ namespace MongoTodo.Controllers
         [HttpPost]
         public ActionResult Add(Todo aItem)
         {            
-           if (ViewData.ModelState.IsValid)
-            {
-                return Add(aItem.Titel);
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
+            return Add(aItem.Titel);
         }
         public ActionResult Add(String aTitel)
         {
             if(ViewData.ModelState.IsValid)
             {
                 new TodoManager().newItem(aTitel);
-                return RedirectToAction("Index");
             }
-
-            return View(aTitel);
+            return RedirectToAction("Index");
         }
 
         public ActionResult AddTodo()
