@@ -1,5 +1,5 @@
 ﻿@model MongoTodo.Models.Todo
-
+@{ Html.EnableClientValidation(); }
 @using (Html.BeginForm("Add", "TodoManager", FormMethod.Post, new { id = "AddTodoForm" , @class = "cmxform AddTodoForm"}))
 {
     @Html.AntiForgeryToken()

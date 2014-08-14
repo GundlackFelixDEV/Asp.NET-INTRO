@@ -36,7 +36,9 @@ namespace MongoTodo.Models
         [DisplayFormat(DataFormatString = "{0:dd\\/MMMM\\/yy}")]
         public object Due;
 
-        [Required, StringLength(32, ErrorMessage = "{0} darf aus max. {1} Zeichen bestehen.")]
+        [Required,         
+        MaxLength(32, ErrorMessage = "{0} darf aus max. {1} Zeichen bestehen."),
+        MinLength(5, ErrorMessage = "{0} muss aus min. {1} Zeichen bestehen.")]
         public object Titel;
 
         [StringLength(256, ErrorMessage = "{0} darf aus max. {1} Zeichen bestehen.")]

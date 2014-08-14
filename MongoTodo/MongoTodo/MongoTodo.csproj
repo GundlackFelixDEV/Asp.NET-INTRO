@@ -401,7 +401,6 @@
     <Content Include="Views\Shared\AddTodoMini.cshtml" />
     <Content Include="Views\Shared\EditTodo.cshtml" />
     <Content Include="Views\Shared\TodoListItem.cshtml" />
-    <Content Include="Scripts\jquery.validate.AddTodo.js" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
