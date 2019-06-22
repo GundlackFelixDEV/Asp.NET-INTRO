@@ -1,0 +1,4 @@
+*/.vs/*
+MongoTodo/MongoTodo/bin/
+MongoTodo/MongoTodo/obj/
+MongoTodo/packages/
