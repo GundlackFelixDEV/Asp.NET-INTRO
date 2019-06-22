@@ -26,7 +26,7 @@ namespace MongoTodo.Models
 
         public void newItem(string aTitel)
         {
-            var newId = (todoItems.Count == 0)?1:todoItems.Max(t => t.Id);
+            var newId = (todoItems.Count == 0)?1:todoItems.Max(t => t.Id) + 1;
             Todo newItem = new Todo();
             newItem.Titel = aTitel;
             newItem.Id = newId;
